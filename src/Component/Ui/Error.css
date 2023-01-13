@@ -19,7 +19,7 @@
 .para{
     font-size: 25px;
 }
-.btn{
+#button{
     position: relative;
-    left: 110px;
+    right: -420px;
 }

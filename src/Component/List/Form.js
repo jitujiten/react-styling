@@ -1,6 +1,7 @@
 import React,{ useState } from "react";
 import Card from "../Ui/Card";
 import Error from "../Ui/Error";
+
 const Form=(props)=>{
 
 const[usernamevalue,setusername]=useState("");
@@ -46,8 +47,8 @@ const removerHandler=()=>{
                   <input type="text" className="form-control" value={usernamevalue} onChange={usernameHandler}/>
                   <label  className="form-label">Age:</label>
                   <input type="number" className="form-control" value={agevalue} onChange={ageHandler}/>
-                  <br/>
-                  <button type="submit" className="btn btn-primary">Submit</button>
+                  <br></br>
+                  <button type="submit" id="sbt" className="btn btn-primary">Submit</button>
                   </form>
                   </Card>
                   </div>

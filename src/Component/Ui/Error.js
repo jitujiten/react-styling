@@ -13,8 +13,8 @@ const Error=(props)=>{
             <div>
                 <p className="para">{props.message}</p>
             </div>
-            <div className="btn">
-                <button className="btn btn-warning" onClick={props.onclickingok}>Okay</button>
+            <div >
+            <button id="button" className="btn btn-warning" onClick={props.onclickingok}>Okay</button>
             </div>
             </Card>
         </div>

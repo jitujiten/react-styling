@@ -1,21 +1,23 @@
-import React,{useState} from 'react';
-import Adduser from './Component/Users/Adduser';
-import UserList from './Component/Users/UserList';
+import React,{ useState} from 'react';
+import Form from './Component/List/Form';
+import "./App.css"
+import Display from './Component/List/Display';
+
 const App = () => {
+  const [enterdata,setdata]=useState([]);
 
-  const [Userslist,setUserlist]=useState([]);
-
-  const onAdduserHandler=(eusername,eage)=>{
-    setUserlist((prevuser)=>{
-      return [...prevuser,{name:eusername,age:eage,id:Math.random().toString}]
-    }) 
+  const addingHandler=(lname,lage)=>{
+    setdata((prvvalue)=>{
+      return [...prvvalue,{name:lname,age:lage,id:Math.random().toString}]
+  })
   }
 
   return (
-    <div>
-     <Adduser onAdduser={onAdduserHandler}/>
-     <UserList users={Userslist}/>
-     </div>  
+   <div className='container'>
+   <Form onadding={addingHandler}/>
+   <Display users={enterdata}/>
+   </div>
+     
   );
 };
 
